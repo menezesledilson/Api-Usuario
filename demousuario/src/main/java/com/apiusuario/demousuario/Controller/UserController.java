@@ -21,9 +21,9 @@ public class UserController {
     public ResponseEntity<?> create(@RequestBody User user) {
         try {
             User createUser = userService.create(user);
-            return ResponseEntity.status(HttpStatus.CREATED).body(createUser); //"Usuario criado."
+            return ResponseEntity.status(HttpStatus.CREATED).body("Usuário criado.CPF válido.");
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao criar usuario." + e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao criar usuário." + e.getMessage());
         }
     }
     @DeleteMapping("/listar/{id}")

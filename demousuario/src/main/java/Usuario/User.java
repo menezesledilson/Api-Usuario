@@ -11,15 +11,16 @@ public class User {
     private String id;
 
     private String nome;
-
+    private String cpf;
+    private String cargo;
     private String cidade;
 
-    private String cargo;
-
-    public User(String nome, String cidade, String cargo) {
+    public User(String id, String nome, String cpf, String cargo, String cidade) {
+        this.id = id;
         this.nome = nome;
-        this.cidade = cidade;
+        this.cpf = cpf;
         this.cargo = cargo;
+        this.cidade = cidade;
     }
 
     public String getId() {
@@ -38,12 +39,12 @@ public class User {
         this.nome = nome;
     }
 
-    public String getCidade() {
-        return cidade;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getCargo() {
@@ -52,5 +53,13 @@ public class User {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 }
